@@ -2,8 +2,8 @@ name: test
 
 on:
   pull_request:
-    types:
-      - unassigned
+    tags:
+      - foo
 
 jobs:
   my-job:
