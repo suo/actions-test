@@ -1,9 +1,7 @@
 name: test
 
 on:
-  pull_request:
-    tags:
-      - foo
+  pull_request
 
 jobs:
   my-job:
@@ -18,4 +16,5 @@ jobs:
           LAST_NAME: Octocat
         run: |
           echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+          echo $GITHUB_REPOSITORY
 
