@@ -1,9 +1,8 @@
 name: test
 
 on:
-  push:
-    tags:
-      - foo
+  workflow_dispatch:
+
 
 jobs:
   my-job:
