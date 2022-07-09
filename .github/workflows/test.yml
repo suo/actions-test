@@ -1,7 +1,7 @@
 name: test
 
 on:
-  push:
+  pull_request:
 
 
 jobs:
@@ -16,6 +16,12 @@ jobs:
           MIDDLE_NAME: The
           LAST_NAME: Octocat
         run: |
+          echo "# test one" >> $GITHUB_STEP_SUMMARY
+          echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+          echo $GITHUB_REPOSITORY
+      - name: Print a greeting
+        run: |
+          echo "# test two" >> $GITHUB_STEP_SUMMARY
           echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
           echo $GITHUB_REPOSITORY
 
@@ -30,8 +36,7 @@ jobs:
           MIDDLE_NAME: The
           LAST_NAME: Octocat
         run: |
-          echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
-          echo $GITHUB_REPOSITORY
+          echo "# test three" >> $GITHUB_STEP_SUMMARY
 
 
 
